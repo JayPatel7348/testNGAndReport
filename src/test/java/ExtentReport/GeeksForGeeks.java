@@ -77,16 +77,19 @@ public class GeeksForGeeks {
         Thread.sleep(1000);
         test.info("Mouse Hover performed on Sub Menu");
         driver.findElement(By.xpath("//*[normalize-space()='"+submenu1+"']")).click();
+        test.info("First Sub Menu clicked");
         driver.findElement(By.xpath("//*[normalize-space()='"+submenu2+"']")).click();
-
+        test.info("Second Sub Menu clicked");
         //Switching window
         sw=new SwitchWindow();
         sw.switchWindow1(driver);
+        test.info("Switched window");
         Thread.sleep(1000);
         //Take screenshot of switched window
         ss=new screenShot();
         ss.Screenshot(driver);
         //Take Fullpage screenshot
+        test.info("Screenshot Taken");
 
 
         String subject= driver.getTitle();
